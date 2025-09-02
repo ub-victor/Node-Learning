@@ -60,3 +60,6 @@ process.on('uncaughtException', (err) => {
     // Exit the Node.js process with code 1 (non-zero means failure)
     process.exit(1);
 });
+
+// Add this closing brace to properly close the fs.readFile callback
+});
