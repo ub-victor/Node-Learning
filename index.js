@@ -18,7 +18,6 @@ fs.readFile(path.join(__dirname, 'files', 'starter.txt'), 'utf-8', (err, data) =
 
   // If no error, log the file's content (the "data") to the console
   console.log(data);
-});
 
 // This line will run immediately, even before the file is finished reading,
 // because readFile is asynchronous (non-blocking).
@@ -26,39 +25,38 @@ console.log('Hello...');
 // that is the way of writing files (path.join is used to create a path( , __dirname for absolute path , files is the folder containing the file, reply.txt is the file to be created), then the text to go in the file created (call back function)
 fs.writeFile(path.join(__dirname, 'files', 'reply.txt'), 'Nice to meet ya', (err) => {
 
-  // If an error occurs (for example, file not found), throw the error
-  if (err) throw err;
+    // If an error occurs (for example, file not found), throw the error
+    if (err) throw err;
 
     // If no error, log 'Write complete' to the console
-  console.log('Write complete');
+    console.log('Write complete');
 
-    
-// append file
-  fs.appendFile(path.join(__dirname, 'files', 'reply.txt'), '\n\nOh yeah yes it is', (err) => {
+    // append file
+    fs.appendFile(path.join(__dirname, 'files', 'reply.txt'), '\n\nOh yeah yes it is', (err) => {
 
-  // If an error occurs (for example, file not found), throw the error
-  if (err) throw err;
+        // If an error occurs (for example, file not found), throw the error
+        if (err) throw err;
 
-    // If no error, log 'Append complete' to the console
-  console.log('Append complete');
+        // If no error, log 'Append complete' to the console
+        console.log('Append complete');
 
-  fs.rename(path.join(__dirname, 'files', 'reply.txt'), path.join(__dirname, 'files', 'newReply.txt'), (err) => {
+        fs.rename(path.join(__dirname, 'files', 'reply.txt'), path.join(__dirname, 'files', 'newReply.txt'), (err) => {
 
-  // If an error occurs (for example, file not found), throw the error
-  if (err) throw err;
+            // If an error occurs (for example, file not found), throw the error
+            if (err) throw err;
 
-    // If no error, log 'Rename complete' to the console
-  console.log('Rename complete');
+            // If no error, log 'Rename complete' to the console
+            console.log('Rename complete');
+        });
+    });
 });
-});
-
 
 // Setup a listener for "uncaughtException"
 // This runs when an error happens in your code that is not caught anywhere else
 process.on('uncaughtException', (err) => {
-  // Log the error message to the console
-  console.error('There was an uncaught error', err);
+    // Log the error message to the console
+    console.error('There was an uncaught error', err);
 
-  // Exit the Node.js process with code 1 (non-zero means failure)
-  process.exit(1);
+    // Exit the Node.js process with code 1 (non-zero means failure)
+    process.exit(1);
 });
