@@ -41,6 +41,14 @@ fs.writeFile(path.join(__dirname, 'files', 'reply.txt'), 'Nice to meet ya', (err
 
     // If no error, log 'Append complete' to the console
   console.log('Append complete');
+
+  fs.rename(path.join(__dirname, 'files', 'reply.txt'), path.join(__dirname, 'files', 'newReply.txt'), (err) => {
+
+  // If an error occurs (for example, file not found), throw the error
+  if (err) throw err;
+
+    // If no error, log 'Rename complete' to the console
+  console.log('Rename complete');
 });
 });
 
