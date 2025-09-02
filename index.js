@@ -7,8 +7,8 @@ const fileOps = async ()=> {
     try{
         const data = await fsPromises.readFile(path.join(__dirname, 'files', 'starter.txt'), 'utf-8');
         console.log(data);
-        await fsPromises.writeFile(path.join(__dirname, 'files', 'promiseWrite.txt'), 'Nice to meet ya');
-        await fsPromises.appendFile(path.join(__dirname, 'files', 'promiseWrite.txt'), '\n\nYes it is');
+        await fsPromises.writeFile(path.join(__dirname, 'files', 'promiseWrite.txt'), data);
+        await fsPromises.appendFile(path.join(__dirname, 'files', 'promiseWrite.txt'), '\n\nNice to meet ya');
         await fsPromises.rename(path.join(__dirname, 'files', 'promiseWrite.txt'), path.join(__dirname, 'files', 'promiseComplete.txt'));
         const newData = await fsPromises.readFile(path.join(__dirname, 'files', 'promiseComplete.txt'), 'utf-8');
         console.log(newData);
@@ -17,3 +17,5 @@ const fileOps = async ()=> {
         console.error('Error occurred:', err);
     }
 }
+
+fileOps();
