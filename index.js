@@ -31,17 +31,19 @@ fs.writeFile(path.join(__dirname, 'files', 'reply.txt'), 'Nice to meet ya', (err
 
     // If no error, log 'Write complete' to the console
   console.log('Write complete');
-});
 
+    
 // append file
-fs.appendFile(path.join(__dirname, 'files', 'test.txt'), 'Testing text', (err) => {
+  fs.appendFile(path.join(__dirname, 'files', 'reply.txt'), '\n\nOh yeah yes it is', (err) => {
 
   // If an error occurs (for example, file not found), throw the error
   if (err) throw err;
 
-    // If no error, log 'Write complete' to the console
+    // If no error, log 'Append complete' to the console
   console.log('Append complete');
 });
+});
+
 
 // Setup a listener for "uncaughtException"
 // This runs when an error happens in your code that is not caught anywhere else
