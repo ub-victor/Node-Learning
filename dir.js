@@ -1,18 +1,11 @@
 const fs = require('fs');
 
-
-if(!fs.existsSync('./new')){ // checks if a file or directory does not already exist.
-    fs.mkdirSync('./new', (err)=>{
-       if (err) throw err;
-       console.log('Directory created successfully!');
-   });
+if (!fs.existsSync('./new')) {
+    fs.mkdirSync('./new'); 
+    console.log('Directory created successfully!');
 }
 
-
-// to remove a directory
-if(fs.existsSync('./new')){ // checks if a file or directory already exists.
-    fs.rmdir('./new', (err)=>{
-       if (err) throw err;
-       console.log('Directory removed successfully!');
-   });
+if (fs.existsSync('./new')) {
+    fs.rmdirSync('./new');  // use the sync version to match as the Sync it allows for error handling
+    console.log('Directory removed successfully!');
 }
