@@ -5,7 +5,6 @@ const fsPromises = require('fs').promises;
 
 const logEvent = require('./logEvent');
 const EventEmitter = require('events');  
-const { console } = require('inspector');
 class Emitter extends EventEmitter { };
 const myEmitter = new Emitter();
 
