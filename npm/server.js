@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3500;
 
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
-    
+
     const extension = path.extname(req.url);
 
     let contentType;
@@ -40,10 +40,36 @@ const server = http.createServer((req, res) => {
             contentType = 'text/html';
     }
 
+    let filePath =
+        contentType === 'text/html' && req.url === '/'
+            ? path.join(__dirname, 'views', 'index.html')
+            : contentType === 'text/html' && req.url.slice(-1) === '/'
+                ? path.join(__dirname, 'views', req.url, 'index.html')
+                : contentType === 'text/html'
+                    ? path.join(__dirname, 'views', req.url)
+                    : path.join(__dirname, req.url);
 
+    // makes .html extension not required in the browser
+    if (!extension && req.url.slice(-1) !== '/') filePath += '.html';
 
-    
-        
+    const fileExists = fs.existsSync(filePath);
+
+    if (fileExists) {
+        serveFile(filePath, contentType, res);
+    } else {
+        switch (path.parse(filePath).base) {
+            case 'old-page.html':
+                res.writeHead(301, { 'Location': '/new-page.html' });
+                res.end();
+                break;
+            case 'www-page.html':
+                res.writeHead(301, { 'Location': '/' });
+                res.end();
+                break;
+            default:
+                serveFile(path.join(__dirname, 'views', '404.html'), 'text/html', res);
+        }
+    }
 
 }); 
 
