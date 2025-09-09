@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
          fs.readFile(path, 'utf8', (err, data)=>{
              res.end(data); 
          })
-     } 
+     }
 }); 
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
