@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 3500;
 
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
+    
     const extension = path.extname(req.url);
 
     let contentType;
