@@ -1,0 +1,4 @@
+2025-09-09	 17:40:26	292ed696-2ab2-43df-a807-09d744314ae1	/	GET
+2025-09-09	 17:40:26	10ab0c82-6877-4a07-85e8-23cdec67cc19	/.well-known/appspecific/com.chrome.devtools.json	GET
+2025-09-09	 17:40:26	895a6fc8-9584-4bae-918d-1145e218acaa	/css/style.css	GET
+2025-09-09	 17:40:26	bb5740f5-c59a-40ea-9d0b-d3ec8efba70a	/favicon.ico	GET
