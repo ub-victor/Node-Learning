@@ -1,7 +1,0 @@
-2025-09-09	 20:06:06	4263ee3c-c25b-4a7e-9b3d-05e69df42bdb	/	GET
-2025-09-09	 20:06:06	78e4e237-9665-4738-ac45-51d3eb3ce477	/.well-known/appspecific/com.chrome.devtools.json	GET
-2025-09-09	 20:06:06	b487713f-c57a-44e9-92ab-ce05efb4d555	/css/style.css	GET
-2025-09-09	 20:06:21	b708b170-a16a-417b-a281-c82e99e66184	/new-page	GET
-2025-09-09	 20:06:21	dca270eb-4b71-4733-9a74-6be519e05c27	/.well-known/appspecific/com.chrome.devtools.json	GET
-2025-09-09	 20:06:21	c3191242-41bb-4b88-9458-8367064e4bb8	/css/style.css	GET
-2025-09-09	 20:06:21	14a32e0b-a93d-4959-8cb3-089448ae8c49	/img/img1.jpg	GET
