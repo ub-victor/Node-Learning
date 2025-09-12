@@ -1,2 +1,0 @@
-2025-09-12	 18:27:22	d183b8e4-2837-4466-9c17-54df62fcae9d	GET	/	undefined
-2025-09-12	 18:27:22	8eb914ba-8ea7-46f5-9651-d8b918d5139a	GET	/css/style.css	undefined

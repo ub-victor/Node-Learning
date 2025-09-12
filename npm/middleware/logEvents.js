@@ -1,33 +1,37 @@
 const { format } = require('date-fns');
-const { v4: uuid} = require('uuid');
-
-// console.log(format(new Date(), 'yyyy-MM-dd\t H:mm:ss'));
-// console.log(uuid());
+const { v4: uuid } = require('uuid');
 
 const fs = require('fs');
-const fsPromises = require('fs').promises
+const fsPromises = require('fs').promises;
 const path = require('path');
 
-const logEvent = async (message, fileName)=> {
+// ----------------- logEvent function -----------------
+const logEvent = async (message, fileName) => {
     const dataTime = `${format(new Date(), 'yyyy-MM-dd\t H:mm:ss')}`;
     const logItem = `${dataTime}\t${uuid()}\t${message}\n`
     console.log(logItem);
-    try{
-        if(!fs.existsSync(path.join(__dirname, '..', 'logs'))){
+    try {
+        if (!fs.existsSync(path.join(__dirname, '..', 'logs'))) {
             await fsPromises.mkdir(path.join(__dirname, '..', 'logs'));
         }
-        // testing 
-        await fsPromises.appendFile(path.join(__dirname, '..', 'logs', fileName), logItem)
-    } catch(err){
+        await fsPromises.appendFile(
+            path.join(__dirname, '..', 'logs', fileName),
+            logItem
+        )
+    } catch (err) {
         console.log(err);
     }
+};
 
-    const logger = (req, res, next) => {
-    logEvents(`${req.method}\t${req.url}\t${req.headers.origin}`, 'reqLog.txt');
+// ----------------- logger middleware -----------------
+const logger = (req, res, next) => {
+    logEvent(
+        `${req.method}\t${req.url}\t${req.headers.origin}`,
+        'reqLog.txt'
+    );
     console.log(`${req.method} ${req.path}`);
     next();
-    }
+};
 
-}
-
-module.exports = {logger, logEvent};
+// ----------------- export both -----------------
+module.exports = { logger, logEvent };
