@@ -1,2 +1,4 @@
 2025-09-12	 22:39:53	ae710ab2-f75f-4b55-b241-fb8e2171f931	GET	/	undefined
 2025-09-12	 22:39:53	3b188001-2225-4de9-ae47-b6a59c16386f	GET	/css/style.css	undefined
+2025-09-12	 22:52:50	149cf37f-35ee-4eaf-8231-9fa7d3256816	GET	/	undefined
+2025-09-12	 22:52:50	4f884c6b-c767-4699-b7cc-3554feeeb5e8	GET	/css/style.css	undefined

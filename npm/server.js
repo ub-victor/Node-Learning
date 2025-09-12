@@ -1,11 +1,14 @@
 const express = require('express'); 
 const app = express();
 const path = require('path');
+const cors = require('cors'); // cross origin resource sharing
 const {logger} = require('./middleware/logEvents');
 const PORT = process.env.PORT || 3500;
 
 // custom middleware logger
 app.use(logger);
+
+app.use(cors()); // to allow cross-origin access it allows all origins by default
 
 
 //built-in middleware to handle urlencoded data
