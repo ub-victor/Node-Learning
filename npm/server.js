@@ -10,6 +10,18 @@ app.use(logger);
 
 app.use(cors()); // to allow cross-origin access it allows all origins by default
 
+const whitelist = ['https://www.google.com', 'http://127.0.0.1:5500', 'http://localhost:3500'];
+
+app.use(cors({
+    origin: (origin, callback) => {
+        if (whitelist.indexOf(origin) !== -1 || !origin) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}));
 
 //built-in middleware to handle urlencoded data
 // in other words, form data;
