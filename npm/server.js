@@ -15,7 +15,7 @@ const whitelist = ['https://www.google.com', 'http://127.0.0.1:5500', 'http://lo
 
 app.use(cors({
     origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
+        if (whitelist.indexOf(origin) !== -1 ) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));

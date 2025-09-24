@@ -34,4 +34,4 @@ const logger = (req, res, next) => {
 };
 
 // ----------------- export both -----------------
-module.exports = { logger, logEvent };
+module.exports = { logger, logEvents: logEvent };
