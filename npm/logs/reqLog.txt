@@ -1,3 +1,8 @@
 2025-09-20	 16:00:19	f05b77cd-f04b-44dd-b14a-c28995a1b75f	GET	/	https://www.google.com
 2025-09-20	 16:33:09	807f34a5-067a-40fc-9467-4854c5ba6d6c	GET	/	https://www.google.com
 2025-09-20	 16:33:39	c3c2a457-6b3b-42c1-8aa5-fcb9c8dd49f9	GET	/	https://www.google.com
+2025-09-24	 16:32:35	b65f95bf-644e-47cc-b839-15fd39da5621	GET	/	undefined
+2025-09-24	 16:32:35	400f922a-9acc-48b3-b3de-a910618ff7b5	GET	/css/style.css	undefined
+2025-09-24	 16:32:36	d0b6d659-ce96-4f2f-b316-357d9868ee1b	GET	/favicon.ico	undefined
+2025-09-24	 16:32:40	34ac536e-2166-4a8b-a279-2dca41ff2846	GET	/css/style.css	undefined
+2025-09-24	 16:32:40	e7b4fc94-5047-4cd4-91bc-49cf2fea4b7b	GET	/.well-known/appspecific/com.chrome.devtools.json	undefined
