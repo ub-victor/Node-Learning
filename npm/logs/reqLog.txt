@@ -9,3 +9,10 @@
 2025-09-24	 16:42:18	4dadcd24-fda6-4109-8a6d-62035ff74d84	GET	/	undefined
 2025-09-24	 16:43:30	a556f63c-3c46-4722-85c9-c0d21929d78f	GET	/	undefined
 2025-09-24	 20:39:57	aec3d94f-8c47-4f96-a943-63f60e7e6ac9	GET	/	undefined
+2025-09-26	 12:07:14	e9790403-341a-4a55-a4f4-65f1eba87ee0	GET	/	undefined
+2025-09-26	 12:07:15	32abe47c-0a64-4fdf-9383-da715baef496	GET	/css/style.css	undefined
+2025-09-26	 12:07:16	ef9f3b68-42af-458a-86de-aa5b4e7256e9	GET	/favicon.ico	undefined
+2025-09-26	 12:17:27	def02778-a330-4959-97f5-de907013962c	GET	/dev	undefined
+2025-09-26	 12:17:27	fc8c57f2-6935-490c-9524-5cef3b1f3fbe	GET	/css/style.css	undefined
+2025-09-26	 12:17:32	af0b260e-24cf-4e97-8bc9-cb42b31fbdea	GET	/	undefined
+2025-09-26	 12:17:32	72420cfe-538d-4d80-b95a-df0a604465b7	GET	/css/style.css	undefined

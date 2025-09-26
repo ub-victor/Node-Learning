@@ -15,7 +15,7 @@ const whitelist = ['https://www.google.com', 'http://127.0.0.1:5500', 'http://lo
 
 app.use(cors({
     origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1 ) {
+        if (whitelist.indexOf(origin) !== -1 || !origin) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
@@ -34,6 +34,8 @@ app.use(express.json());
 
 //serve static files
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.get(/^\/$|\/index(.html)?$/, (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
