@@ -16,3 +16,11 @@
 2025-09-26	 12:17:27	fc8c57f2-6935-490c-9524-5cef3b1f3fbe	GET	/css/style.css	undefined
 2025-09-26	 12:17:32	af0b260e-24cf-4e97-8bc9-cb42b31fbdea	GET	/	undefined
 2025-09-26	 12:17:32	72420cfe-538d-4d80-b95a-df0a604465b7	GET	/css/style.css	undefined
+2025-09-26	 14:30:15	9a3a7841-d645-4adb-9cfc-6afa61bfe603	GET	/	undefined
+2025-09-26	 14:30:15	79e81a19-be8e-4a2c-9940-b47c01b2401e	GET	/css/style.css	undefined
+2025-09-26	 14:30:21	071395ef-0121-49e4-afb8-caf096fa2b6b	GET	/subdir	undefined
+2025-09-26	 14:41:33	51fc0277-7d12-4db3-b66a-9a9173c0fa21	GET	/subdir/test	undefined
+2025-09-26	 14:41:55	5754169b-ef3d-4076-816a-c80b3ded7dc9	GET	/subdir/tests	undefined
+2025-09-26	 14:41:55	1a0184fa-4776-4443-b409-01bf24eb4584	GET	/subdir/css/style.css	undefined
+2025-09-26	 14:44:35	7756379b-be49-40fc-9759-ea6ebe6118fe	GET	/subdir/tests	undefined
+2025-09-26	 14:44:35	aed44fcf-71b0-40c1-bdce-dd21bb691dfc	GET	/subdir/css/style.css	undefined
