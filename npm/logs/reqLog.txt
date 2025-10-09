@@ -57,3 +57,14 @@
 2025-09-26	 18:03:25	c526609c-7293-4c4f-89fd-c5e983dcd574	GET	/employees/1	undefined
 2025-09-26	 18:03:31	7d414f27-9508-4007-9326-253a426e700e	GET	/employees/5	undefined
 2025-09-26	 18:05:09	25551679-8a62-43b4-a5df-4a78bdc00ea5	GET	/employees/:5	undefined
+2025-10-09	 11:14:55	1c17dea8-fac9-46d5-9102-8845cab73286	GET	/	undefined
+2025-10-09	 11:14:55	c42cc0af-658e-43da-baa6-18cef11c39b5	GET	/css/style.css	undefined
+2025-10-09	 11:14:58	c2cfddd4-1bdf-4b0b-a39d-8ebd92d722d6	GET	/favicon.ico	undefined
+2025-10-09	 11:15:09	6ffe79dd-7559-4689-8a10-277a1ed327f2	GET	/	undefined
+2025-10-09	 11:15:09	726d6c64-56b5-4a7f-bfa2-ef156e3fc20e	GET	/css/style.css	undefined
+2025-10-09	 11:15:19	0e0f4819-9eb6-4db2-8933-c87a0f36fbc8	GET	/employee	undefined
+2025-10-09	 11:15:19	2f2cb231-7435-4fa3-ae8c-1796ad494430	GET	/css/style.css	undefined
+2025-10-09	 11:15:23	561d4001-6a2b-4aeb-8183-ec5f1c351dc1	GET	/employee/	undefined
+2025-10-09	 11:15:23	886fbb10-69b4-4941-98ea-74d12c9a6c36	GET	/employee/css/style.css	undefined
+2025-10-09	 11:15:31	e17a22b8-c90b-4771-93ad-379f03d29f59	GET	/employees/	undefined
+2025-10-09	 11:15:35	e5356db0-bca5-4d34-89cb-69074160ee6d	GET	/employees	undefined
