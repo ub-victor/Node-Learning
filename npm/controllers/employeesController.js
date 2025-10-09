@@ -12,3 +12,10 @@ const createNewEmployee = (req, res) => {
             "lastname": req.body.lastname
         });
     }
+
+const updateEmployee = (req, res)=>{
+            res.json({
+                "firstname": req.body.firstname,
+                "lastname": req.body.lastname
+            })
+    }
