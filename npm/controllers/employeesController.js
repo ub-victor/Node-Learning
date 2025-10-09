@@ -27,3 +27,4 @@ const deleteEmployee = (req, res)=>{
 const getEmployee = (req, res)=>{
     res.json({ "id": req.params.id})
 }
+
