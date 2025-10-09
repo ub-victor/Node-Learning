@@ -11,15 +11,10 @@ const PORT = process.env.PORT || 3500;
 // custom middleware logger
 app.use(logger);
 
-app.use(cors()); // to allow cross-origin access it allows all origins by default
+// Cross origin Resource sharing
+app.use(cors(corsOptions)); // to allow cross-origin access it allows all origins by default
 
-const whitelist = ['https://www.google.com', 'http://127.0.0.1:5500', 'http://localhost:3500'];
 
-app.use(corsOptions);
-
-//built-in middleware to handle urlencoded data
-// in other words, form data;
-// 'content-type: application/x-www-form-urlencoded'
 app.use(express.urlencoded({ extended: false }));
 
 //built-in middleware for json
