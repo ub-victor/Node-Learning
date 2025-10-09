@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cors = require('cors'); // cross origin resource sharing
+const corsOptions = require('./config/corsOptions')
 const {logger} = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
+const corsOptions = require('./config/corsOptions');
 const PORT = process.env.PORT || 3500;
 
 // custom middleware logger
@@ -13,16 +15,7 @@ app.use(cors()); // to allow cross-origin access it allows all origins by defaul
 
 const whitelist = ['https://www.google.com', 'http://127.0.0.1:5500', 'http://localhost:3500'];
 
-app.use(cors({
-    origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}));
+app.use(corsOptions);
 
 //built-in middleware to handle urlencoded data
 // in other words, form data;
