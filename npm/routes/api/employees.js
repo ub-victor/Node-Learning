@@ -3,7 +3,7 @@ const router = express.Router();
 
 const data = {};
 
-data.employees = require('../../model/employees.json');
+data.employees = require('../../data/employees.json');
 
 // routers
 
