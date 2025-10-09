@@ -8,9 +8,7 @@ data.employees = require('../../data/employees.json');
 // routers
 
 router.route('/')
-    .get((req, res)=>{
-        res.json(data.employees);
-    })
+    .get()
     .post()
     .put()
     .delete();
