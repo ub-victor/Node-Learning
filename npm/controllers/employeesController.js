@@ -23,3 +23,7 @@ const updateEmployee = (req, res)=>{
 const deleteEmployee = (req, res)=>{
             res.json({"id": req.body.id})
     }
+
+const getEmployee = (req, res)=>{
+    res.json({ "id": req.params.id})
+}
