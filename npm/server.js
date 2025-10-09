@@ -32,6 +32,17 @@ app.use('/', require('./routes/root'));
 app.use('/subdir', require('./routes/subdir'));
 app.use('/employees', require('./routes/api/employees'));
 
+app.all('*', (rep, res)=>{
+    res.status(404);
+    if(req.accwpts('html')){
+        res.sendFile(path.join(__dirname, 'views', '404.html'));
+    }else if (req.accepts('json')){
+        res.json({"error": "404 Not Found"});
+    }else{
+        res.type('txt').send("404.html");
+    }
+})
+
 
 
 app.get(/\/*/, (req, res) => {
