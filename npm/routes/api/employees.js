@@ -12,7 +12,7 @@ router.route('/')
     .get(employeesController.getAllEmployees)
     .post(employeesController.createNewEmployee)
     .put(employeesController.updateEmployee)
-    .delete();
+    .delete(employeesController.deleteEmployee);
     
 router.route('/:id')
 .get();
