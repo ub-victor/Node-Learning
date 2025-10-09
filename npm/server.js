@@ -14,7 +14,7 @@ app.use(logger);
 // Cross origin Resource sharing
 app.use(cors(corsOptions)); // to allow cross-origin access it allows all origins by default
 
-
+// buit-in middleware to handle urlencoded form data
 app.use(express.urlencoded({ extended: false }));
 
 //built-in middleware for json
