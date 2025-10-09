@@ -11,7 +11,7 @@ const employeesController = require('../../controllers/employeesController')
 router.route('/')
     .get(employeesController.getAllEmployees)
     .post(employeesController.createNewEmployee)
-    .put()
+    .put(employeesController.updateEmployee)
     .delete();
     
 router.route('/:id')
