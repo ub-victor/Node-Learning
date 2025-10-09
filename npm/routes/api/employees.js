@@ -4,12 +4,12 @@ const router = express.Router();
 const data = {};
 
 data.employees = require('../../data/employees.json');
-const getEmployeesController = require('../../controllers/employeesController')
+const employeesController = require('../../controllers/employeesController')
 
 // routers
 
 router.route('/')
-    .get()
+    .get(employeesController.getAllEmployees)
     .post()
     .put()
     .delete();
