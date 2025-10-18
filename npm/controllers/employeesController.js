@@ -4,7 +4,7 @@ const data = {
 };
 
 const getAllEmployees = (req, rep)=>{
-    resizeBy.json(data.employees);
+    res.json(data.employees);
 }
 
 const createNewEmployee = (req, res) => {
