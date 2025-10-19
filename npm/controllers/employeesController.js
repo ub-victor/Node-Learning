@@ -8,10 +8,15 @@ const getAllEmployees = (req, rep)=>{
 }
 
 const createNewEmployee = (req, res) => {
-        res.json({
+        const newEmployee = {  
+            id: data.employees[data.employees.length -1 ].id + 1 || 1,
             "firstname": req.body.firstname,
             "lastname": req.body.lastname
-        });
+        }
+        
+        if (!newEmployee.firstname || !newEmployee.lastname){
+            return res.status(400).json({message: 'First and last names are required.'});
+        }
     }
 
 const updateEmployee = (req, res)=>{
