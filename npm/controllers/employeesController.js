@@ -52,6 +52,7 @@ const getEmployee = (req, res)=>{
     if(!employee){
         return res.status(400).json ({"message": `Employee ID ${req.params.id} not found`  });
     }
+    res.json(employee);
 }
 
 module.exports = {
