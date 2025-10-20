@@ -16,6 +16,9 @@ const createNewEmployee = (req, res) => {
         
         if (!newEmployee.firstname || !newEmployee.lastname){
             return res.status(400).json({message: 'First and last names are required.'});
+
+            data.setEmployees([...data.employees]);
+            res.status(201).json(data.employees);
         }
     }
 
