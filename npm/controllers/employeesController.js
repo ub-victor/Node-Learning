@@ -23,10 +23,7 @@ const createNewEmployee = (req, res) => {
     }
 
 const updateEmployee = (req, res)=>{
-            res.json({
-                "firstname": req.body.firstname,
-                "lastname": req.body.lastname
-            })
+                
     }
 
 const deleteEmployee = (req, res)=>{
