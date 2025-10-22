@@ -3,7 +3,7 @@ const data = {
     setEmployees: function(data){this.employees = data }
 };
 
-const getAllEmployees = (req, rep)=>{
+const getAllEmployees = (req, res)=>{
     res.json(data.employees);
 }
 
