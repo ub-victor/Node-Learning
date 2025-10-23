@@ -16,5 +16,6 @@ const handleNewUser = async (req, res)=>{
 
     // check for duplicate usernames in the db
     const duplicate = usersDB.users.find(person => person.username === user); 
+    
 
 }
