@@ -1,53 +1,45 @@
 const express = require('express'); 
 const app = express();
 const path = require('path');
-const cors = require('cors'); // cross origin resource sharing
+const cors = require('cors'); // Cross-Origin Resource Sharing
 const corsOptions = require('./config/corsOptions');
-const {logger} = require('./middleware/logEvents');
+const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const PORT = process.env.PORT || 3500;
 
-// custom middleware logger
+// Custom middleware logger
 app.use(logger);
 
-// Cross origin Resource sharing
-app.use(cors(corsOptions)); // to allow cross-origin access it allows all origins by default
+// Cross-Origin Resource Sharing
+app.use(cors(corsOptions)); // allows cross-origin access
 
-// buit-in middleware to handle urlencoded form data
+// Built-in middleware to handle URL-encoded form data
 app.use(express.urlencoded({ extended: false }));
 
-//built-in middleware for json
+// Built-in middleware for JSON
 app.use(express.json());
 
-//serve static files
-// default path is /public
-// app.use('/', express.static(path.join(__dirname, 'public')));
-
-// serve static files
+// Serve static files (default path is /public)
 app.use(express.static(path.join(__dirname, '/public')));
 
-
-
+// Routes
 app.use('/', require('./routes/root'));
 app.use('/employees', require('./routes/api/employees'));
 
-app.all('*', (rep, res)=>{
+// 404 handler (catch-all)
+app.use((req, res) => {
     res.status(404);
-    if(req.accwpts('html')){
+    if (req.accepts('html')) {
         res.sendFile(path.join(__dirname, 'views', '404.html'));
-    }else if (req.accepts('json')){
-        res.json({"error": "404 Not Found"});
-    }else{
-        res.type('txt').send("404.html");
+    } else if (req.accepts('json')) {
+        res.json({ error: "404 Not Found" });
+    } else {
+        res.type('txt').send("404 Not Found");
     }
-})
-
-
-
-app.get(/\/*/, (req, res) => {
-    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
 
+// Error handler middleware
 app.use(errorHandler);
 
+// Start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -68,3 +68,14 @@
 2025-10-09	 11:15:23	886fbb10-69b4-4941-98ea-74d12c9a6c36	GET	/employee/css/style.css	undefined
 2025-10-09	 11:15:31	e17a22b8-c90b-4771-93ad-379f03d29f59	GET	/employees/	undefined
 2025-10-09	 11:15:35	e5356db0-bca5-4d34-89cb-69074160ee6d	GET	/employees	undefined
+2025-10-23	 12:46:10	60a02f46-ed69-4775-b3c7-5db849120e44	GET	/employees	undefined
+2025-10-23	 16:17:42	4357da9e-3945-44a2-867b-214625565e74	GET	/employees	undefined
+2025-10-23	 16:19:06	60fbd646-a45b-42c0-86c5-a2ab0e7a17f4	GET	/employees/1	undefined
+2025-10-23	 16:19:13	e9135c2e-eaf3-4088-9a42-54073ee35e3e	GET	/employees/2	undefined
+2025-10-23	 16:19:58	4fd3c7dc-aec6-4369-a47c-3fe2fb2cadb3	POST	/employees	undefined
+2025-10-23	 16:24:39	c1e699af-bf10-4037-9bc1-989a24a31356	POST	/employees	undefined
+2025-10-23	 16:26:29	6b218730-b030-42c6-a455-59607c2b6ff3	POST	/employees	undefined
+2025-10-23	 16:26:57	7758156d-3033-4130-9e8c-d7faec2f3c7a	GET	/employees	undefined
+2025-10-23	 16:29:30	9a09d55b-a56b-4e55-8303-585db18ef262	PUT	/employees	undefined
+2025-10-23	 16:40:39	a7538e9a-13ed-4664-9522-040d8c5a1ea6	DELETE	/employees	undefined
+2025-10-23	 16:40:47	304f3dbf-cb8f-4138-9a12-5003aacdfb58	DELETE	/employees	undefined
