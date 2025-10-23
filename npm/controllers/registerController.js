@@ -14,4 +14,6 @@ const handleNewUser = async (req, res)=>{
     const {user, pwd} = req.body;
     if (!user || !pwd) return res.status(400).status({'message': 'Username and Password are required.'});
 
+    // 
+
 }
