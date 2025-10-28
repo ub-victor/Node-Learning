@@ -33,7 +33,7 @@ const handleNewUser = async (req, res)=>{
         usersDB.setUsers([...usersDB.users, newUser]);
         await fsPromises.writeFile(
             path.join(__dirname, '..', 'model', 'users.json'),
-            JSON.stringify(usersDB.users)//This writes the updated users array back to disk at ../model/users.json.
+            JSON.stringify(usersDB.users, null, 2) // pretty print//This writes the updated users array back to disk at ../model/users.json.
         );
 
         console.log(usersDB.users);
