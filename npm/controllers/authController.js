@@ -16,7 +16,7 @@ const handleLogin = async (req, res)=> {
         // Create JWTs
         res.json({ 'success': `User ${user} is logged in!`});
     }else {
-        res.sendStatus(401);
+        res.sendStatus(401); 
     }
 }
 
