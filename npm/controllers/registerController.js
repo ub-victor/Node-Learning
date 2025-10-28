@@ -3,7 +3,7 @@ const fsPromises = require('fs').promises;
 const bcrypt = require('bcrypt');
 
 const usersDB = {
-    users: require('../model/user.json'),
+    users: require('../model/users.json'),
     setUsers: function(data){this.users = data}
 }
 
