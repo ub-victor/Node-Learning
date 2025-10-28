@@ -1,3 +1,10 @@
 [
-    
+  {
+    "username": "Victor",
+    "password": "$2b$10$tWXfnWAJmR3EvE0L/6ujv.ficM1NuNDpGpfWsNFrWcNTtMXlzcz/6"
+  },
+  {
+    "username": "Victoire",
+    "password": "$2b$10$SDdpMS76thq/m3cUZzEoNemtoBvkZ7q1q9PleZ/yMpYZLB4ZoQNtu"
+  }
 ]

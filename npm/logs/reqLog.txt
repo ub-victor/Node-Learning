@@ -79,3 +79,8 @@
 2025-10-23	 16:29:30	9a09d55b-a56b-4e55-8303-585db18ef262	PUT	/employees	undefined
 2025-10-23	 16:40:39	a7538e9a-13ed-4664-9522-040d8c5a1ea6	DELETE	/employees	undefined
 2025-10-23	 16:40:47	304f3dbf-cb8f-4138-9a12-5003aacdfb58	DELETE	/employees	undefined
+2025-10-28	 10:52:10	595c8998-90b3-42f3-9544-c79d12cf6a75	POST	/register	undefined
+2025-10-28	 10:53:23	9bd36163-0814-498f-9c0d-4750615d8e84	POST	/register	undefined
+2025-10-28	 11:04:17	2f6e63c0-7ede-4c02-92f6-93f22b17fdb0	POST	/register	undefined
+2025-10-28	 11:07:07	ab0bdbb7-76cb-45c7-82af-3ff2d979b2c5	POST	/register	undefined
+2025-10-28	 11:07:23	3fde9977-1757-46f7-b5c6-93abd1229b3c	POST	/register	undefined
