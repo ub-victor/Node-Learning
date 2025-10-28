@@ -11,6 +11,10 @@ const handleLogin = async (req, res)=> {
     const foundUser = usersDB.users.find(person => person.username === user);
     // evaluate password
     const match = await bcrypt.compare(pwd, foundUser.password);
+    if(match){
+        // Create JWTs
+        res.json({ 'success': `User ${user} is logged in!`})
+    }
 
 
 }
