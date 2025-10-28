@@ -28,7 +28,7 @@ app.use('/employees', require('./routes/api/employees'));
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
 
-// 404 handler (catch-all)
+// 404 handler (catch-all) 
 app.use((req, res) => {
     res.status(404);
     if (req.accepts('html')) {
