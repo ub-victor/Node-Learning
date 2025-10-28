@@ -11,7 +11,7 @@ const usersDB = {
 
 const handleNewUser = async (req, res)=>{
     const {user, pwd} = req.body;//After this line, user holds req.body.user and pwd holds req.body.pwd.
-    if (!user || !pwd) return res.status(400).status({'message': 'Username and Password are required.'});
+    if (!user || !pwd) return res.status(400).json({'message': 'Username and Password are required.'});// 
 
     // check for duplicate usernames in the db
     const duplicate = usersDB.users.find(person => person.username === user); 
