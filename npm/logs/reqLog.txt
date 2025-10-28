@@ -84,3 +84,7 @@
 2025-10-28	 11:04:17	2f6e63c0-7ede-4c02-92f6-93f22b17fdb0	POST	/register	undefined
 2025-10-28	 11:07:07	ab0bdbb7-76cb-45c7-82af-3ff2d979b2c5	POST	/register	undefined
 2025-10-28	 11:07:23	3fde9977-1757-46f7-b5c6-93abd1229b3c	POST	/register	undefined
+2025-10-28	 16:35:01	0b01a66b-1efa-4e5b-b06f-d12309e2bb61	POST	/auth	undefined
+2025-10-28	 16:39:58	923e67f6-c4b8-47f6-beb8-4715a9c0dd85	POST	/auth	undefined
+2025-10-28	 16:40:21	5b87766f-78f2-4a59-88dd-25b32bfcde8a	POST	/auth	undefined
+2025-10-28	 16:40:27	11340519-4115-48cf-9a00-1163727ba168	POST	/auth	undefined
