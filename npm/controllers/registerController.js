@@ -1,12 +1,12 @@
 const path = require('path');
+const fsPromises = require('fs').promises;
+const bcrypt = require('bcrypt');
 
 const usersDB = {
     users: require('../model/user.json'),
     setUsers: function(data){this.users = data}
 }
 
-const fsPromises = require('fs').promises;
-const bcrypt = require('bcrypt');
 
 
 const handleNewUser = async (req, res)=>{
