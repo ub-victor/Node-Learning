@@ -18,6 +18,15 @@ const handleNewUser = async (req, res)=>{
     if (duplicate) return res.sendStatus(409); // Conflict
     try {
         //encrypt the password
+        /*
+        bcrypt.hash(pwd, 10) — call bcrypt’s hash function:
+
+        pwd — plain-text password to hash.
+
+        10 — salt rounds (cost factor). More rounds = slower but harder to brute force.
+
+        hashedPwd receives resulting hashed string (bcrypt format $2b$10$...).
+        */
         const hashedPwd = await bcrypt.hash(pwd, 10); 
         //store the new user
         const newUser = {"username": user, "password": hashedPwd }
