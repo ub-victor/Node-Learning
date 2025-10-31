@@ -22,8 +22,13 @@ const handleLogin = async (req, res)=> {
         const accessToken = jtw.sign(
             {"username": foundUser.username},
             process.env.ACCESS_TOKEN_SECRET,
-            
-        )
+            {expiresIn: '30s' }
+        );
+        const refreshToken = jtw.sign(
+            {"username": foundUser.username},
+            process.env.ACCESS_TOKEN_SECRET,
+            {expiresIn: '30s' }
+        );
         res.json({ 'success': `User ${user} is logged in!`});
     }else {
         res.sendStatus(401);
