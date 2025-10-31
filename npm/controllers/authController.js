@@ -21,6 +21,7 @@ const handleLogin = async (req, res)=> {
         // Create JWTs
         const accessToken = jtw.sign(
             {"username": foundUser.username},
+            process.env.ACCESS_TOKEN_SECRET,
             
         )
         res.json({ 'success': `User ${user} is logged in!`});
