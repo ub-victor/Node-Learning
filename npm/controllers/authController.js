@@ -29,6 +29,7 @@ const handleLogin = async (req, res)=> {
             process.env.REFRESH_TOKEN_SECRET,
             {expiresIn: '1d' }
         );
+        // db room where to save our refresh
         res.json({ 'success': `User ${user} is logged in!`});
     }else {
         res.sendStatus(401);
