@@ -20,7 +20,8 @@ const handleLogin = async (req, res)=> {
     if(match){
         // Create JWTs
         const accessToken = jtw.sign(
-            {"username": foundUser.username}
+            {"username": foundUser.username},
+            
         )
         res.json({ 'success': `User ${user} is logged in!`});
     }else {
