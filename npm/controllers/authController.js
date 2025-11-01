@@ -30,8 +30,8 @@ const handleLogin = async (req, res)=> {
             {expiresIn: '1d' }
         );
         // db room where to save our refresh in db
+        const otherUsers = usersDB.users.filter(person => person.username !== foundUser.username);
 
-        
 
         res.json({ 'success': `User ${user} is logged in!`});
     }else {
