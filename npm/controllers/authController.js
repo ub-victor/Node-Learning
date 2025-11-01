@@ -29,7 +29,7 @@ const handleLogin = async (req, res)=> {
             process.env.REFRESH_TOKEN_SECRET,
             {expiresIn: '1d' }
         );
-        // db room where to save our refresh in db
+        // db room where we save our refresh in db
         const otherUsers = usersDB.users.filter(person => person.username !== foundUser.username);
         const currentUser = { ...foundUser, refreshToken};
         usersDB.setUsers([...otherUsers, currentUser])
