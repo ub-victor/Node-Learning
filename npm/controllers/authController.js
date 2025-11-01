@@ -33,6 +33,10 @@ const handleLogin = async (req, res)=> {
         const otherUsers = usersDB.users.filter(person => person.username !== foundUser.username);
         const currentUser = { ...foundUser, refreshToken};
         usersDB.setUsers([...otherUsers, currentUser])
+        await fsPromises.writeFile(
+            path.join(__dirname, '..', 'model', 'users.json'),
+            JSON.stringify(usersDB.users)
+        )
 
 
         res.json({ 'success': `User ${user} is logged in!`});
