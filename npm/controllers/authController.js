@@ -39,7 +39,7 @@ const handleLogin = async (req, res)=> {
         )
 
 
-        res.json({ 'success': `User ${user} is logged in!`});
+        res.json({ accessToken});
     }else {
         res.sendStatus(401);
     }
