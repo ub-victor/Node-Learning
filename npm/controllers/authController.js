@@ -31,6 +31,7 @@ const handleLogin = async (req, res)=> {
         );
         // db room where to save our refresh in db
         const otherUsers = usersDB.users.filter(person => person.username !== foundUser.username);
+        const currentUser = { ...foundUser, refreshToken};
 
 
         res.json({ 'success': `User ${user} is logged in!`});
