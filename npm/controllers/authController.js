@@ -5,7 +5,7 @@ const usersDB = {
 
 const bcrypt = require('bcrypt');
 
-const jtw = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 require('dotenv').config();
 const fsPromises = require ('fs').promises;
 const path = require('path');
@@ -24,7 +24,7 @@ const handleLogin = async (req, res)=> {
             process.env.ACCESS_TOKEN_SECRET,
             {expiresIn: '30s' }
         );
-        const refreshToken = jtw.sign(
+        const refreshToken = jwt.sign(
             {"username": foundUser.username},
             process.env.REFRESH_TOKEN_SECRET,
             {expiresIn: '1d' }
