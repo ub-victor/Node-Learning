@@ -37,7 +37,15 @@ const handleLogin = async (req, res)=> {
             path.join(__dirname, '..', 'model', 'users.json'),
             JSON.stringify(usersDB.users)
         );
-        res.cookie('jwt', refreshToken, {httpOnly : true, maxAge: 24 * 60 * 60 * 1000});
+        /*
+        // Here is the meaning of each part of this line of code
+        // 'jwt' is the name of the cookie
+        // refreshToken is the value we want to store in the cookie
+        // {httpOnly : true, maxAge: 24 * 60 * 60 * 1000} are the options for the cookie
+        // httpOnly means the cookie is not accessible via JavaScript
+        // maxAge sets the expiration time of the cookie
+        */
+        res.cookie('jwt', refreshToken, {httpOnly : true, maxAge: 24 * 60 * 60 * 1000}); 
         res.json({ accessToken});
     }else {
         res.sendStatus(401);
