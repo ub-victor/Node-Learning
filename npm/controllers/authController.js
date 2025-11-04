@@ -44,6 +44,12 @@ const handleLogin = async (req, res)=> {
         // {httpOnly : true, maxAge: 24 * 60 * 60 * 1000} are the options for the cookie
         // httpOnly means the cookie is not accessible via JavaScript
         // maxAge sets the expiration time of the cookie
+        // here it is set to 24 hours (24 hours * 60 minutes * 60 seconds * 1000 milliseconds) = 86400000 milliseconds
+        // with purpose of enhancing security by preventing XSS attacks
+        // XSS (Cross-Site Scripting) attacks occur when an attacker injects malicious scripts into content from otherwise trusted websites
+        // By using httpOnly cookies, we help mitigate the risk of client-side scripts accessing the token
+        // we not sending the refresh token in the response body but storing it in an httpOnly cookie
+
         */
         res.cookie('jwt', refreshToken, {httpOnly : true, maxAge: 24 * 60 * 60 * 1000}); 
         // Send accessToken containing username
