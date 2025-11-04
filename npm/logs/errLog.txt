@@ -3,3 +3,6 @@
 2025-10-23	 16:19:58	5f9478fe-5219-41fc-9f28-7762f5983123	TypeError: Cannot read properties of undefined (reading 'firstname')
 2025-10-23	 16:40:39	d538d180-32d8-4c80-b93f-8ef59d3c9264	TypeError: Cannot read properties of undefined (reading 'id')
 2025-10-28	 16:35:01	e8a6140c-b389-4f2c-add3-aabdb06eb4d6	TypeError: Cannot destructure property 'user' of 'req.body' as it is undefined.
+2025-11-05	 1:02:12	72fa7ea3-2065-461b-86bd-816d50ce32fb	TypeError: Cannot read properties of undefined (reading 'id')
+2025-11-05	 1:03:30	87323993-9881-4c52-b6b6-d023f48a54c4	TypeError: Cannot read properties of undefined (reading 'id')
+2025-11-05	 1:04:10	57a337d1-6dfa-4ae9-96c0-9eb43a51de16	TypeError: Cannot read properties of undefined (reading 'id')
