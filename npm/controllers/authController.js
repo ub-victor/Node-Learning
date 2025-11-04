@@ -46,6 +46,7 @@ const handleLogin = async (req, res)=> {
         // maxAge sets the expiration time of the cookie
         */
         res.cookie('jwt', refreshToken, {httpOnly : true, maxAge: 24 * 60 * 60 * 1000}); 
+        // Send accessToken containing username
         res.json({ accessToken});
     }else {
         res.sendStatus(401);
