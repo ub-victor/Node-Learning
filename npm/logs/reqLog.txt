@@ -88,3 +88,11 @@
 2025-10-28	 16:39:58	923e67f6-c4b8-47f6-beb8-4715a9c0dd85	POST	/auth	undefined
 2025-10-28	 16:40:21	5b87766f-78f2-4a59-88dd-25b32bfcde8a	POST	/auth	undefined
 2025-10-28	 16:40:27	11340519-4115-48cf-9a00-1163727ba168	POST	/auth	undefined
+2025-11-03	 17:52:29	7b34404b-ddef-47a5-83fa-ed9f39684eb8	GET	/employees/2	undefined
+2025-11-03	 18:06:46	922bf1d8-05e3-40be-9023-e885431c98c6	GET	/auth	undefined
+2025-11-03	 18:07:34	4afe321f-cbbe-4823-b2a5-9a3e5583ff09	POST	/auth	undefined
+2025-11-03	 18:08:10	bd8c1ca2-f78d-48e6-9329-4d21f07a5024	POST	/auth	undefined
+2025-11-03	 18:36:04	8ae657ef-5c42-4202-bc17-9f72caf4fe81	GET	/employees	undefined
+2025-11-03	 18:36:39	98888f33-18ae-4a8a-b886-7e44d6547c5f	POST	/auth	undefined
+2025-11-03	 18:36:52	96f852ef-758d-4b6a-a723-36321899648d	GET	/employees	undefined
+2025-11-03	 18:37:07	fc87c84f-7513-49ca-b465-736b069bea74	GET	/employees	undefined
