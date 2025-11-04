@@ -49,6 +49,7 @@ const handleLogin = async (req, res)=> {
         // XSS (Cross-Site Scripting) attacks occur when an attacker injects malicious scripts into content from otherwise trusted websites
         // By using httpOnly cookies, we help mitigate the risk of client-side scripts accessing the token
         // we not sending the refresh token in the response body but storing it in an httpOnly cookie
+        // it can be seen in postman under the cookies section after login
 
         */
         res.cookie('jwt', refreshToken, {httpOnly : true, maxAge: 24 * 60 * 60 * 1000}); 
