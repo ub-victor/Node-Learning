@@ -27,6 +27,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
+
+// this  works as a way to protect routes / it work as a waterflow
+
 app.use('/employees', require('./routes/api/employees'));
 // 404 handler (catch-all)
 app.use((req, res) => {
