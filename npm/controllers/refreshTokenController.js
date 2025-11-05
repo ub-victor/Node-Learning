@@ -14,7 +14,7 @@ const handleRefreshToken = (req, res)=> {
     const refreshToken = cookies.jwt;
 
     const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
-    if(!foundUser) return res.sendStatus(401); // Unauthorized
+    if(!foundUser) return res.sendStatus(403); // 403 = Forbidden;
     // evaluate password
     const match = await bcrypt.compare(pwd, foundUser.password);
     if(match){
