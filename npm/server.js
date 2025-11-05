@@ -21,6 +21,9 @@ app.use(express.urlencoded({ extended: false }));
 // Built-in middleware for JSON
 app.use(express.json());
 
+// Middleware for cookies
+app.use(cookieParser());
+
 // Serve static files (default path is /public)
 app.use(express.static(path.join(__dirname, '/public')));
 
