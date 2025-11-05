@@ -17,7 +17,8 @@ const handleRefreshToken = (req, res)=> {
     if(!foundUser) return res.sendStatus(403); // 403 = Forbidden;
     // evaluate jwt
 
-    jwt.verify( // verify the validity of the refresh token, the jwt.verify method takes the token, the secret key, and a callback function as arguments
+    // verify the validity of the refresh token, the jwt.verify method takes the token, the secret key, and a callback function as arguments with the purpose of decoding the token and checking its validity
+    jwt.verify( 
         refreshToken,
         process.env.REFRESH_TOKEN_SECRET,
         (err, decoded) => {
