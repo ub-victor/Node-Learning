@@ -9,7 +9,8 @@ require('dotenv').config();
 
 const handleRefreshToken = (req, res)=> {
     const cookies = req.cookies;
-    if(!cookies?.jwt) return res.status(401) // Unauthorized
+    if(!cookies?.jwt) return res.status(401) // 401 = Unauthorized, and this line checks if the cookie named 'jwt' exists in the request cookies
+    console.log(cookies.jwt); 
     const foundUser = usersDB.users.find(person => person.username === user);
     if(!foundUser) return res.sendStatus(401); // Unauthorized
     // evaluate password
