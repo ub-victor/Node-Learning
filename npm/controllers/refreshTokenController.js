@@ -19,8 +19,8 @@ const handleRefreshToken = (req, res)=> {
 
     // verify the validity of the refresh token, the jwt.verify method takes the token, the secret key, and a callback function as arguments with the purpose of decoding the token and checking its validity
     jwt.verify( 
-        refreshToken,
-        process.env.REFRESH_TOKEN_SECRET,
+        refreshToken, // the token to be verified
+        process.env.REFRESH_TOKEN_SECRET, 
         (err, decoded) => {
             if(err || foundUser.username !== decoded.username) return res.sendStatus(403);
             const accessToken = jwt.sign(
@@ -35,4 +35,4 @@ const handleRefreshToken = (req, res)=> {
        
 }
 
-module.exports = { handleLogin };
+module.exports = { handleRefreshToken };
