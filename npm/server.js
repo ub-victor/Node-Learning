@@ -26,9 +26,8 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Routes
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
-app.use('/employees', require('./routes/api/employees'));
 app.use('/auth', require('./routes/auth'));
-
+app.use('/employees', require('./routes/api/employees'));
 // 404 handler (catch-all)
 app.use((req, res) => {
     res.status(404);
