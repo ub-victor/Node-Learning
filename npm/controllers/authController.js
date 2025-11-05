@@ -54,7 +54,7 @@ const handleLogin = async (req, res)=> {
         */
         res.cookie('jwt', refreshToken, {httpOnly : true, maxAge: 24 * 60 * 60 * 1000}); 
         // Send accessToken containing username
-        res.json({ accessToken});
+        res.json({ accessToken}); // send access token as json response look like this { "accessToken": "<token_value>" }
     }else {
         res.sendStatus(401);
     }
