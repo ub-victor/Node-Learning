@@ -9,7 +9,7 @@ require('dotenv').config();
 
 const handleRefreshToken = (req, res)=> {
     const cookies = req.cookies;
-    if(!cookies?.jwt) return res.status(401).json({'message': 'Username and password are required.'});
+    if(!cookies?.jwt) return res.status(401)
     const foundUser = usersDB.users.find(person => person.username === user);
     if(!foundUser) return res.sendStatus(401); // Unauthorized
     // evaluate password
