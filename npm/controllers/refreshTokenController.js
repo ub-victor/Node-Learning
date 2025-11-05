@@ -7,8 +7,8 @@ const usersDB = {
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-const handleRefreshToken = async (req, res)=> {
-    const {user, pwd} = req.body;
+const handleRefreshToken = (req, res)=> {
+    const cookies = req.cookies;
     if(!user || !pwd) return res.status(400).json({'message': 'Username and password are required.'});
     const foundUser = usersDB.users.find(person => person.username === user);
     if(!foundUser) return res.sendStatus(401); // Unauthorized
