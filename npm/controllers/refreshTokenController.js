@@ -24,11 +24,11 @@ const handleRefreshToken = (req, res)=> {
         (err, decoded) => { // callback function that runs after verification
             if(err || foundUser.username !== decoded.username) return res.sendStatus(403);
             const accessToken = jwt.sign( // create new access token
-                {"username": decoded.username},
-                process.env.ACCESS_TOKEN_SECRET,
+                {"username": decoded.username}, // payload containing the username
+                process.env.ACCESS_TOKEN_SECRET, // secret key for signing the token
                 {expiresIn: '30s' }
             );
-            res.json({ accessToken });
+            res.json({ accessToken }); // send the new access token as a JSON response
         }
     );
 
