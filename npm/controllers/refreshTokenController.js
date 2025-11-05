@@ -29,7 +29,7 @@ const handleRefreshToken = (req, res)=> {
                 {expiresIn: '30s' }
             );
             res.json({ accessToken }); // send the new access token as a JSON response
-        }
+        } 
     );
 
        
