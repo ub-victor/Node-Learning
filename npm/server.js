@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Middleware for cookies
-app.use(cookieParser());
+app.use(cookieParser()); // this will parse cookies from the request headers
 
 // Serve static files (default path is /public)
 app.use(express.static(path.join(__dirname, '/public')));
