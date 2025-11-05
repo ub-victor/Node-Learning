@@ -16,7 +16,7 @@ const handleRefreshToken = (req, res)=> {
     const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
     if(!foundUser) return res.sendStatus(403); // 403 = Forbidden;
     // evaluate jwt
-    const match = await bcrypt.compare(pwd, foundUser.password);
+    
     if(match){
         // Create JWTs
         const accessToken = jwt.sign(
