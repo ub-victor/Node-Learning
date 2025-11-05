@@ -3,7 +3,7 @@ const usersDB = {
     setUsers: function(data){this.users = data}
 }
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt'); // is a library to help you hash passwords.
 
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
