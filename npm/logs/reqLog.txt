@@ -121,3 +121,6 @@
 2025-11-05	 2:05:04	1ca6f65d-53e1-4c4a-b78f-3e4b2982104b	POST	/auth	undefined
 2025-11-05	 2:05:14	2d06867e-5844-4421-9a2a-3170d9a75916	POST	/auth	undefined
 2025-11-05	 2:05:51	6d9ed505-7d05-4358-95df-e30c5f101617	POST	/register	undefined
+2025-11-05	 14:48:51	6938befa-8fd7-4dda-8032-ee8845910543	POST	/auth	undefined
+2025-11-05	 14:49:18	843ed13c-9662-4bdc-9eec-3337ea2c853b	GET	/employees	undefined
+2025-11-05	 15:19:25	642e46cb-1e30-4e68-b586-da2b95238999	GET	/employees	undefined
