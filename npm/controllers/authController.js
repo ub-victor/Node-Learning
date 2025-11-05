@@ -21,6 +21,7 @@ const handleLogin = async (req, res)=> {
         // Create JWTs
         const accessToken = jwt.sign(
             {"username": foundUser.username},
+            // Creates a token (using the user’s name + secret key).
             process.env.ACCESS_TOKEN_SECRET,
             {expiresIn: '30s' }
         );
