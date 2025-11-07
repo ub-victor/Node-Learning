@@ -32,7 +32,7 @@ const handleLogin = async (req, res)=> {
         );
         // db room where we save our refresh in db with our current user
         const otherUsers = usersDB.users.filter(person => person.username !== foundUser.username);
-        const currentUser = { ...foundUser, refreshToken};
+        const currentUser = { ...foundUser, refreshToken}; // add refreshToken to current user
         usersDB.setUsers([...otherUsers, currentUser])
         await fsPromises.writeFile(
             path.join(__dirname, '..', 'model', 'users.json'),
