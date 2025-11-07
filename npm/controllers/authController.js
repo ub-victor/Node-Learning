@@ -53,6 +53,7 @@ const handleLogin = async (req, res)=> {
         // it can be seen in postman under the cookies section after login
 
         */
+       // cookie name, cookie value, options
         res.cookie('jwt', refreshToken, {httpOnly : true, maxAge: 24 * 60 * 60 * 1000}); 
         // Send accessToken containing username
         res.json({ accessToken}); // send access token as json response look like this { "accessToken": "<token_value>" }
