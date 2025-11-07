@@ -134,3 +134,8 @@
 2025-11-05	 15:47:58	74d33bfe-3244-485a-aa4a-39a9895d7545	GET	/employees	undefined
 2025-11-05	 15:56:02	1bb2a20a-0551-4bcc-bf89-613bba46647d	POST	/auth	undefined
 2025-11-05	 15:56:18	d881b0b6-4ce6-44a4-b53d-85bf1dc5b962	GET	/employees/2	undefined
+2025-11-08	 1:35:40	f9a99a64-6115-4681-beca-89bba0c33ff0	POST	/auth	undefined
+2025-11-08	 1:36:29	abf5624b-460b-4091-8845-560f78addeea	GET	/employees	undefined
+2025-11-08	 1:36:42	0c99da69-2897-44b5-9192-9e19c23742c5	POST	/auth	undefined
+2025-11-08	 1:36:57	33b15548-6df7-4fdc-852f-8b7633596c48	GET	/employees	undefined
+2025-11-08	 1:38:10	0bbb49a5-aba5-402c-b44d-09cda2e69db0	GET	/employees	undefined
