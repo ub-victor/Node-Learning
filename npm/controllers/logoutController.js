@@ -8,9 +8,9 @@ const path = require('path');
 
 const handleLogout = (req, res)=> {
     // On client, also delete the access token
-    
+
     const cookies = req.cookies;
-    if(!cookies?.jwt) return res.sendStatus(401) // 401 = Unauthorized, and this line checks if the cookie named 'jwt' exists in the request cookies
+    if(!cookies?.jwt) return res.sendStatus(204) // 204 = No Content, and this line checks if the cookie named 'jwt' exists in the request cookies
     const refreshToken = cookies.jwt;
 
     const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
