@@ -13,8 +13,12 @@ const handleLogout = (req, res)=> {
     if(!cookies?.jwt) return res.sendStatus(204) // 204 = No Content, and this line checks if the cookie named 'jwt' exists in the request cookies
     const refreshToken = cookies.jwt;
 
+
+    // Is refreshToken in DB?
     const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
-    if(!foundUser) return res.sendStatus(403); // 403 = Forbidden;
+    if(!foundUser){
+        
+    }
     // evaluate jwt
 
     // verify the validity of the refresh token, the jwt.verify method takes the token, the secret key, and a callback function as arguments with the purpose of decoding the token and checking its validity
