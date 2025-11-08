@@ -27,6 +27,10 @@ const handleLogout = (req, res)=> {
     const otherUsers = usersDB.users.filter(person => person.refreshToken !== refreshToken);
     const currentUser = { ...foundUser, refreshToken: ''}; // remove refreshToken from current user
     usersDB.setUsers([...otherUsers, currentUser])
+    await fsPromises.writeFile(
+        path.join(__dirname, '..', 'model', 'users.json'),
+        JSON.stringify(usersDB.users)
+    );
     
 
     res.clearCookie('jwt', {httpOnly : true}); // secure: true means the cookie will only be sent over HTTPS
