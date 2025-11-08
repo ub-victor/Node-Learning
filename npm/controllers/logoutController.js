@@ -11,11 +11,11 @@ const handleLogout = (req, res)=> {
 
     const cookies = req.cookies;
     if(!cookies?.jwt) return res.sendStatus(204) // 204 = No Content, and this line checks if the cookie named 'jwt' exists in the request cookies
-    const refreshToken = cookies.jwt;
+    const refreshToken = cookies.jwt; // get refresh token from cookie
 
 
     // Is refreshToken in DB?
-    const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
+    const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);// find user with matching refresh token
     if(!foundUser){
 
         res.clearCookie('jwt', {httpOnly : true}); // secure: true means the cookie will only be sent over HTTPS
