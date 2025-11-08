@@ -22,24 +22,17 @@ const handleLogout = (req, res)=> {
         return res.sendStatus(204);
         
     }
-    // evaluate jwt
-
-    // verify the validity of the refresh token, the jwt.verify method takes the token, the secret key, and a callback function as arguments with the purpose of decoding the token and checking its validity
-    jwt.verify( 
-        refreshToken, // the token to be verified
-        process.env.REFRESH_TOKEN_SECRET,  // the secret key used to sign the token
-        (err, decoded) => { // callback function that runs after verification
-            if(err || foundUser.username !== decoded.username) return res.sendStatus(403);
-            const accessToken = jwt.sign( // create new access token
-                {"username": decoded.username}, // payload containing the username
-                process.env.ACCESS_TOKEN_SECRET, // secret key for signing the token
-                {expiresIn: '30s' }
-            );
-            res.json({ accessToken }); // send the new access token as a JSON response
-        } 
+    // Remove refreshToken in DB
+    const otherUsers = usersDB.users.filter(person => person.refreshToken !== refreshToken);
+    usersDB.setUsers([...otherUsers]);
+    await fsPromises.writeFile(
+        path.join(__dirname, '..', 'model', 'users.json'),
+        JSON.stringify(usersDB.users)
     );
 
+    res.clearCookie('jwt', {httpOnly : true}); // secure: true means the cookie will only be sent over HTTPS
+    res.sendStatus(204);
        
 }
 
-module.exports = { handleRefreshToken };
+module.exports = { handleLogout };
