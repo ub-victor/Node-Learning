@@ -27,7 +27,7 @@ const handleLogout = (req, res)=> {
     const currentUser = { ...foundUser, refreshToken: ''}; // remove refreshToken from current user
     usersDB.setUsers([...otherUsers, currentUser]);
     await fsPromises.writeFile(
-        path.join(__dirname, '..', 'model', 'users.json'),
+        path.join(__dirname,  '..', 'model', 'users.json'),
         JSON.stringify(usersDB.users)
     );
     
