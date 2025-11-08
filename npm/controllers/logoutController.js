@@ -17,6 +17,8 @@ const handleLogout = (req, res)=> {
     // Is refreshToken in DB?
     const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
     if(!foundUser){
+
+        res.clearCookie('jwt', {httpOnly : true}); // secure: true means the cookie will only be sent over HTTPS
         
     }
     // evaluate jwt
