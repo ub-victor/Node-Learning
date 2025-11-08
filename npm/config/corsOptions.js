@@ -1,4 +1,4 @@
-const { useCallback } = require("react")
+
 
 const whitelist = [
     'https://www.yoursite.com',
