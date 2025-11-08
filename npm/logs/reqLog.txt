@@ -141,3 +141,5 @@
 2025-11-08	 1:38:10	0bbb49a5-aba5-402c-b44d-09cda2e69db0	GET	/employees	undefined
 2025-11-08	 1:53:18	41072e84-7a7c-405d-8fc4-067deb88bda6	POST	/auth	undefined
 2025-11-08	 1:55:55	1554dea9-1ec0-4333-a9c8-1c3717da592b	GET	/refresh	undefined
+2025-11-08	 2:55:21	9ed08671-2319-4c88-9945-781a360f2d11	POST	/register	undefined
+2025-11-08	 2:56:33	7119ad4d-a79f-48e4-bf1d-d3c2c98cef7b	GET	/logout	undefined
