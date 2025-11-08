@@ -19,6 +19,7 @@ const handleLogout = (req, res)=> {
     if(!foundUser){
 
         res.clearCookie('jwt', {httpOnly : true}); // secure: true means the cookie will only be sent over HTTPS
+        return res.sendStatus(204);
         
     }
     // evaluate jwt
