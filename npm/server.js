@@ -13,6 +13,10 @@ const PORT = process.env.PORT || 3500;
 // Custom middleware logger
 app.use(logger);
 
+
+// Handle options credentials check - before CORS!
+app.use(credentials);
+
 // Cross-Origin Resource Sharing
 app.use(cors(corsOptions)); // allows cross-origin access
 
