@@ -11,6 +11,7 @@ const verifyJWT = (req, res, next)=>{
         (err, decoded)=>{
             if(err) return res.sendStatus(403); // Invalid token
             req.user = decoded.username; // the username stored in the token , the token payload contains the username then this line extracts it and assigns it to req.user for use in subsequent middleware or route handlers.
+            req.roles = decoded.userInfo.roles; // extract roles from token payload and assign to req.roles
             next();
         }
     )
