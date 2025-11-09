@@ -6,3 +6,6 @@ const verifyRole = (...allowedRoles)=>{
         if(!result) return res.sendStatus(403); // Forbidden if no matching role found
         next(); // proceed to next middleware or route handler
     }
+}
+
+module.exports = verifyRole;
