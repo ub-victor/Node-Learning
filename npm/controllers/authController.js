@@ -25,7 +25,7 @@ const handleLogin = async (req, res)=> {
                 "username": foundUser.username,
                 "roles": roles
             }
-        }
+        },
             // Creates a token (using the user’s name + secret key).
             process.env.ACCESS_TOKEN_SECRET,
             {expiresIn: '30s' }
