@@ -6,8 +6,8 @@ const verifyRole = require('../../middleware/verifyRole');
 
 router.route('/')
     .get(employeesController.getAllEmployees)
-    .post(employeesController.createNewEmployee)
-    .put(employeesController.updateEmployee)
+    .post(verifyRole(ROLES_LIST.Admin, ROLES_LIST.Editor), employeesController.createNewEmployee)
+    .put(verifyRole(ROLES_LIST.Admin, ROLES_LIST.Editor), employeesController.updateEmployee)
     .delete(employeesController.deleteEmployee);
 
 router.route('/:id')
