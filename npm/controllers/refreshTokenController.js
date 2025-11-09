@@ -26,7 +26,7 @@ const handleRefreshToken = (req, res)=> {
             const accessToken = jwt.sign( // create new access token
                 {"userInfo": {
                     "username": decoded.username,
-                    "roles": roles
+                    "roles": roles // array of roles
                 }}, // payload containing the username and roles
                 process.env.ACCESS_TOKEN_SECRET, // secret key for signing the token
                 {expiresIn: '30s' }
