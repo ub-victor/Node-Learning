@@ -8,7 +8,7 @@ router.route('/')
     .get(employeesController.getAllEmployees)
     .post(verifyRole(ROLES_LIST.Admin, ROLES_LIST.Editor), employeesController.createNewEmployee)
     .put(verifyRole(ROLES_LIST.Admin, ROLES_LIST.Editor), employeesController.updateEmployee)
-    .delete(employeesController.deleteEmployee);
+    .delete(verifyRole(ROLES_LIST.Admin), employeesController.deleteEmployee);
 
 router.route('/:id')
     .get(employeesController.getEmployee);
