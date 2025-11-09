@@ -42,5 +42,3 @@ const handleLogout = async (req, res) => {
 };
 
 module.exports = { handleLogout };
-
-// 5:14 
