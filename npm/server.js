@@ -63,5 +63,7 @@ app.use(errorHandler);
 
 // Start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Connect to MongoDB
+connectDB();
 
 // 5:38
