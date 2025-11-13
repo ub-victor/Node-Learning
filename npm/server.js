@@ -10,6 +10,7 @@ const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const mongoose = require('mongoose'); // MongoDB object modeling tool with purpose of managing relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB
+const connectDB = require('./config/dbConn');
 const PORT = process.env.PORT || 3500;
 
 // Custom middleware logger
