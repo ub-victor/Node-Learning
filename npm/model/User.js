@@ -21,3 +21,5 @@ const userSchema = new Schema ({
     },
     refreshToken: String
 })
+
+module.exports = userSchema;
