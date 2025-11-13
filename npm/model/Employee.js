@@ -1,3 +1,5 @@
 const mongoose = require('mongoose'); // Import mongoose library to define schema and interact with MongoDB
 
-const schema = mongoose.Schema;
+const schema = mongoose.Schema; // Define a shorthand for mongoose.Schema
+
+const 
