@@ -65,8 +65,15 @@ app.use((req, res) => {
 // Error handler middleware
 app.use(errorHandler);
 
-// Start server
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+//
+mongoose.connection.once('open', () => {
+    console.log('Connected to MongoDB');
+    // Start server
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+});
+
+
+
 
 
 // 5:38
