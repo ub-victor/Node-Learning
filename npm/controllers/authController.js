@@ -6,7 +6,6 @@ const usersDB = {
 const bcrypt = require('bcrypt'); // is a library to help you hash passwords.
 
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
 const fsPromises = require ('fs').promises;
 const path = require('path');
 
