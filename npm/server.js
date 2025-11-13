@@ -13,6 +13,10 @@ const mongoose = require('mongoose'); // MongoDB object modeling tool with purpo
 const connectDB = require('./config/dbConn');
 const PORT = process.env.PORT || 3500;
 
+
+// Connect to MongoDB
+connectDB();
+
 // Custom middleware logger
 app.use(logger);
 
@@ -63,7 +67,6 @@ app.use(errorHandler);
 
 // Start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-// Connect to MongoDB
-connectDB();
+
 
 // 5:38
