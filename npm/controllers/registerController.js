@@ -1,5 +1,4 @@
-const path = require('path');
-const fsPromises = require('fs').promises;
+const User = require('../model/User');
 const bcrypt = require('bcrypt');
 
 const usersDB = {
