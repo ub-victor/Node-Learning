@@ -16,15 +16,7 @@ const handleLogout = async (req, res) => {
     }
 
     // Remove refreshToken from the found user and persist
-    const otherUsers = usersDB.users.filter(person => person.refreshToken !== refreshToken);
-    const currentUser = { ...foundUser, refreshToken: '' };
-    usersDB.setUsers([...otherUsers, currentUser]);
-
-    // Persist updated users (handle errors)
-    await fsPromises.writeFile(
-      path.join(__dirname, '..', 'model', 'users.json'),
-      JSON.stringify(usersDB.users, null, 2) // pretty print for readability
-    );
+    
 
     // Clear cookie on client (options must match set cookie)
     res.clearCookie('jwt', { httpOnly: true, secure: true, sameSite: 'None' });
