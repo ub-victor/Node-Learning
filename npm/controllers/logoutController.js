@@ -16,7 +16,9 @@ const handleLogout = async (req, res) => {
     }
 
     // Remove refreshToken from the found user and persist
-    
+    foundUser.refreshToken = '';
+    const result = await foundUser.save();
+    console.log(result)
 
     // Clear cookie on client (options must match set cookie)
     res.clearCookie('jwt', { httpOnly: true, secure: true, sameSite: 'None' });
