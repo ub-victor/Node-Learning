@@ -8,7 +8,7 @@ const handleLogout = async (req, res) => {
     const refreshToken = cookies.jwt;
 
     // Find user with this refresh token
-    const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
+    const foundUser = await User.findOne({refreshToken}).exec();
     if (!foundUser) {
       // Clear cookie on client (match options used when setting the cookie)
       res.clearCookie('jwt', { httpOnly: true, secure: true, sameSite: 'None' });
