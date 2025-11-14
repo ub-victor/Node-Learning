@@ -29,7 +29,7 @@ const handleNewUser = async (req, res)=>{
         const hashedPwd = await bcrypt.hash(pwd, 10); 
         //store the new user
         const result = await User.create({
-            "username": user,
+             "username": user,
              "password": hashedPwd
         })
         
