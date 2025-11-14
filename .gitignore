@@ -1,4 +1,5 @@
-node_modules/
+.git
 .env
-.DS_Store
-.dbConn.js
+dbConn.js
+node_modules/
+package.json

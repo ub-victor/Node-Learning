@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { Editor, Admin } = require('../config/roles_list');
+// const { Editor, Admin } = require('../config/roles_list');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema ({
