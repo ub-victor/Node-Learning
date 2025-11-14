@@ -1,10 +1,10 @@
 const User = require('../model/User');
 const bcrypt = require('bcrypt');
 
-const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function(data){this.users = data}
-}
+// const usersDB = {
+//     users: require('../model/users.json'),
+//     setUsers: function(data){this.users = data}
+// }
 
 
 
