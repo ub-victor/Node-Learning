@@ -1,7 +1,4 @@
-const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function(data){this.users = data}
-}
+const User = require('../model/User');
 
 const bcrypt = require('bcrypt'); // is a library to help you hash passwords.
 
