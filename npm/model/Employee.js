@@ -2,7 +2,7 @@ const mongoose = require('mongoose'); // Import mongoose library to define schem
 
 const schema = mongoose.Schema; // Define a shorthand for mongoose.Schema
 
-const employeeSchema = new schema({
+const employeeSchema = new Schema({
     firstname: {
         type: String,
         required: true
