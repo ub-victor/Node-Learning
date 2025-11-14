@@ -1,9 +1,4 @@
-const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function(data){this.users = data}
-}
-
-
+const User = require('../model/User');
 const jwt = require('jsonwebtoken');
 
 const handleRefreshToken = async (req, res)=> {
