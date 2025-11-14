@@ -11,7 +11,7 @@ const handleRefreshToken = (req, res)=> {
     if(!cookies?.jwt) return res.sendStatus(401) // 401 = Unauthorized, and this line checks if the cookie named 'jwt' exists in the request cookies
     const refreshToken = cookies.jwt;
 
-    const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
+    const foundUser = await User.findOne({username: user}).exec();
     if(!foundUser) return res.sendStatus(403); // 403 = Forbidden;
     // evaluate jwt
 
