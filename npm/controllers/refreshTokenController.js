@@ -6,12 +6,12 @@ const usersDB = {
 
 const jwt = require('jsonwebtoken');
 
-const handleRefreshToken = (req, res)=> {
+const handleRefreshToken = async (req, res)=> {
     const cookies = req.cookies;
     if(!cookies?.jwt) return res.sendStatus(401) // 401 = Unauthorized, and this line checks if the cookie named 'jwt' exists in the request cookies
     const refreshToken = cookies.jwt;
 
-    const foundUser = await User.findOne({username: user}).exec();
+    const foundUser = await User.findOne({refreshToken}).exec();
     if(!foundUser) return res.sendStatus(403); // 403 = Forbidden;
     // evaluate jwt
 
