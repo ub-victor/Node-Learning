@@ -30,6 +30,7 @@ const handleLogin = async (req, res)=> {
         // db room where we save our refresh in db with our current user
         foundUser.refreshToken = refreshToken;
         const result = await foundUser.save();
+        console.log(result);
 
 
         /*
