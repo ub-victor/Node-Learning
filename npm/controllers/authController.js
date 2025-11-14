@@ -28,7 +28,10 @@ const handleLogin = async (req, res)=> {
             {expiresIn: '1d' }
         );
         // db room where we save our refresh in db with our current user
-        
+        foundUser.refreshToken = refreshToken;
+        const result = await foundUser.save();
+
+
         /*
         // Here is the meaning of each part of this line of code
         // 'jwt' is the name of the cookie
