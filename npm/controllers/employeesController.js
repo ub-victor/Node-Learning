@@ -11,6 +11,7 @@ const createNewEmployee = await (req, res) => {
         return res.status(400).json({ 'message': 'First and last names are required'})
     }
 
+    
 }
 
 const updateEmployee = (req, res) => {
