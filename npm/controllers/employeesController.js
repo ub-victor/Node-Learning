@@ -51,7 +51,9 @@ const deleteEmployee = async (req, res) => {
 }
 
 const getEmployee = async (req, res) => {
-    const employee = data.employees.find(emp => emp.id === parseInt(req.params.id));
+    if( )
+    const employee = await Employee.findOne({_id: req.body.id}).exec();
+
     if (!employee) {
         return res.status(400).json({ "message": `Employee ID ${req.params.id} not found` });
     }
