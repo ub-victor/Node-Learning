@@ -1,7 +1,7 @@
 const Employee = require ("../model/Employee")
 
 const getAllEmployees = async (req, res) => {
-    res.json(data.employees);
+    const employees = await Employee.find();
 }
 
 const createNewEmployee = (req, res) => {
