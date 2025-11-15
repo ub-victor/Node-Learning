@@ -26,7 +26,7 @@ const createNewEmployee = async (req, res) => {
 
 const updateEmployee = async (req, res) => {
      if(!req?.body?.id){
-        return res.status(400).json({"message": "ID paremeter is required"})
+        return res.status(400).json({"message": "ID paremeter is required"});
      }
 
 
