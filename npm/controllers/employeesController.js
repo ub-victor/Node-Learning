@@ -6,12 +6,12 @@ const getAllEmployees = async (req, res) => {
     res.json(employees);
 }
 
-const createNewEmployee = await (req, res) => {
+const createNewEmployee = async (req, res) => {
     if(!req?.body?.firstname || !req?.body?.lastname) {
         return res.status(400).json({ 'message': 'First and last names are required'})
     }
 
-    
+
 }
 
 const updateEmployee = (req, res) => {
