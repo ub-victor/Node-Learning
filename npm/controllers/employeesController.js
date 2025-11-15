@@ -29,6 +29,8 @@ const updateEmployee = async (req, res) => {
         return res.status(400).json({"message": "ID paremeter is required"});
      }
 
+     const employee = await Employee.findOne({_id: req.body.id})
+
 
     if (!employee) {
         return res.status(400).json({ "message": `Employee ID ${req.body.id} not found` });
