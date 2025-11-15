@@ -44,7 +44,7 @@ const deleteEmployee = async (req, res) => {
     const employee = await Employee.findOne({_id: req.body.id}).exec()
 
     if (!employee) {
-        return res.status(400).json({ "message": `Employee ID ${req.body.id} not found` });
+        return res.status(204).json({ "message": `No employee matches ID ${req.body.id}` });
     }
     const filteredArray = data.employees.filter(emp => emp.id !== parseInt(req.body.id));
     data.setEmployees([...filteredArray]);
