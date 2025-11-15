@@ -36,7 +36,7 @@ const updateEmployee = async (req, res) => {
     if (req.body?.firstname) employee.firstname = req.body.firstname;
     if (req.body?.lastname) employee.lastname = req.body.lastname;
     const result = await employee.save();
-    res.json(data.employee);
+    res.json(result);
 }
 
 const deleteEmployee = async (req, res) => {
