@@ -17,6 +17,8 @@ const createNewEmployee = async (req, res) => {
             lastname: req.body.lastname
         })
         res.status(201).json(result);
+    } catch(err) {
+        console.error(err);
     }
 
 
