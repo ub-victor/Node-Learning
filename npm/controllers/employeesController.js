@@ -55,7 +55,7 @@ const getEmployee = async (req, res) => {
     const employee = await Employee.findOne({_id: req.body.id}).exec();
 
     if (!employee) {
-        return res.status(400).json({ "message": `Employee ID ${req.params.id} not found` });
+        return res.status(204).json({ "message": `No employee matches ID ${req.body.id}` });
     }
     res.json(employee);
 }
