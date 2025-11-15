@@ -33,7 +33,7 @@ const updateEmployee = async (req, res) => {
 
 
     if (!employee) {
-        return res.status(400).json({ "message": `Employee ID ${req.body.id} not found` });
+        return res.status(204).json({ "message": `No employee matches ID ${req.body.id}` });
     }
     if (req.body.firstname) employee.firstname = req.body.firstname;
     if (req.body.lastname) employee.lastname = req.body.lastname;
