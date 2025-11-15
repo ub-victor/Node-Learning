@@ -41,7 +41,8 @@ const updateEmployee = async (req, res) => {
 
 const deleteEmployee = (req, res) => {
     if(!req?.body?.id)return res.status(400).json({"message": "Employee ID required"});
-    const employee = data.employees.find(emp => emp.id === parseInt(req.body.id));
+    const employee = await Employee.findOne({_id: req.body.id}).exec()
+
     if (!employee) {
         return res.status(400).json({ "message": `Employee ID ${req.body.id} not found` });
     }
