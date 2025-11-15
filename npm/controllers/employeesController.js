@@ -11,9 +11,6 @@ const createNewEmployee = await (req, res) => {
         return res.status(400).json({ 'message': 'First and last names are required'})
     }
 
-
-    data.setEmployees([...data.employees, newEmployee]);
-    res.status(201).json(data.employees);
 }
 
 const updateEmployee = (req, res) => {
