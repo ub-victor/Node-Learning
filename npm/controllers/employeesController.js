@@ -5,7 +5,7 @@ const getAllEmployees = async (req, res) => {
     if(!employees) return res.status(204).json({'message': 'No employees found.'});
 }
 
-const createNewEmployee = (req, res) => {
+const createNewEmployee = await (req, res) => {
     const newEmployee = {
         id: data.employees?.length ? data.employees[data.employees.length - 1].id + 1 : 1,
         firstname: req.body.firstname,
