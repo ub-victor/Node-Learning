@@ -52,7 +52,7 @@ const deleteEmployee = async (req, res) => {
 
 const getEmployee = async (req, res) => {
     if(!req?.param?.id) return res.status(400).json({'message': 'Employee ID required'})
-    const employee = await Employee.findOne({_id: req.body.id}).exec();
+    const employee = await Employee.findOne({_id: req.param.id}).exec();
 
     if (!employee) {
         return res.status(204).json({ "message": `No employee matches ID ${req.body.id}` });
