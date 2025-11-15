@@ -179,3 +179,13 @@
 2025-11-15	 2:08:46	d59a5c67-bcce-42bc-85a9-48a4117dd323	GET	/refresh	undefined
 2025-11-15	 2:09:20	70b56030-07b5-4fdb-8e86-ad3b5f936c5b	POST	/auth	undefined
 2025-11-15	 2:10:01	c83d3ccb-7ee4-4a45-b654-b9755623b7de	GET	/logout	undefined
+2025-11-15	 3:47:15	ad93de5a-d54e-410c-8168-3df1d7769f85	POST	/auth	undefined
+2025-11-15	 3:47:51	051ca19b-01fd-406d-8cc0-4d0cbf3bbb31	GET	/employees	undefined
+2025-11-15	 3:48:11	4662ac94-b0b2-46a5-a093-ad0bcc9363e8	POST	/auth	undefined
+2025-11-15	 3:48:43	5420c72a-07ed-45d8-9e00-6bbc817c7cdb	GET	/employees	undefined
+2025-11-15	 3:49:02	e0cde77a-d7b2-42c3-bee7-171a5f499a95	GET	/employees	undefined
+2025-11-15	 3:49:34	567a5950-4bff-4cb9-bfb9-69b069362b4a	GET	/employees/2	undefined
+2025-11-15	 3:49:55	2b5f7b98-decb-4893-8d52-5b3d016e0b4a	POST	/auth	undefined
+2025-11-15	 3:50:19	5be3bcd6-26e9-4a34-8da2-656e1d0242c5	POST	/employees	undefined
+2025-11-15	 3:50:44	7a0a83f8-e37b-4010-946a-cd8d0625ca5b	GET	/employees	undefined
+2025-11-15	 3:50:48	ef998164-cd20-44f8-8995-c3941619db15	GET	/employees	undefined
