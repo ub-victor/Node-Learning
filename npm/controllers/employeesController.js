@@ -24,8 +24,12 @@ const createNewEmployee = async (req, res) => {
 
 }
 
-const updateEmployee = (req, res) => {
-    const employee = data.employees.find(emp => emp.id === parseInt(req.body.id));
+const updateEmployee = async (req, res) => {
+     if(!req?.body?.id){
+        return res.status(400).json({"message": "ID paremeter is required"})
+     }
+
+
     if (!employee) {
         return res.status(400).json({ "message": `Employee ID ${req.body.id} not found` });
     }
