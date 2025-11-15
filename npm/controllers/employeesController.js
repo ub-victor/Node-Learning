@@ -51,7 +51,7 @@ const deleteEmployee = async (req, res) => {
 }
 
 const getEmployee = async (req, res) => {
-    if( )
+    if(!req?.body?.id)
     const employee = await Employee.findOne({_id: req.body.id}).exec();
 
     if (!employee) {
